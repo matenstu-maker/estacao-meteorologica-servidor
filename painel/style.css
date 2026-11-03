@@ -1,0 +1,150 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f1f5f9;
+    color: #1e293b;
+}
+
+header {
+    background: #123b5d;
+    color: white;
+    padding: 25px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+header h1 {
+    margin-bottom: 8px;
+}
+
+#status {
+    background: #e2e8f0;
+    color: #123b5d;
+    padding: 9px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+}
+
+main {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.indicadores {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    gap: 18px;
+    margin-bottom: 25px;
+}
+
+.card {
+    background: white;
+    padding: 22px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.06);
+}
+
+.card h3 {
+    font-size: 15px;
+    color: #64748b;
+    margin-bottom: 18px;
+}
+
+.card strong {
+    font-size: 27px;
+    color: #123b5d;
+}
+
+.card p {
+    font-size: 27px;
+    font-weight: bold;
+    color: #123b5d;
+    margin-bottom: 10px;
+}
+
+.card small {
+    display: block;
+    color: #64748b;
+    font-size: 12px;
+    margin-bottom: 12px;
+}
+
+/* BOTÃO ZERAR CHUVA */
+
+.btn-zerar {
+    margin-top: 8px;
+    padding: 10px 18px;
+    width: 100%;
+    background-color: #d9534f;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+
+.btn-zerar:hover {
+    background-color: #c9302c;
+}
+
+.btn-zerar:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.graficos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 18px;
+}
+
+.grafico {
+    min-width: 0;
+    background: white;
+    padding: 22px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.06);
+}
+
+.grafico h2,
+.ultima-leitura h2 {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.grafico canvas {
+    width: 100% !important;
+    max-height: 260px;
+}
+
+.ultima-leitura {
+    margin-top: 22px;
+}
+
+.ultima-leitura p {
+    color: #64748b;
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    color: #64748b;
+}
+
+@media (max-width: 600px) {
+    header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}

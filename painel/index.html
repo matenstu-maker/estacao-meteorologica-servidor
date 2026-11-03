@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Estação Meteorológica</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Biblioteca de gráficos -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <h1>Estação Meteorológica</h1>
+        <p>Monitoramento em tempo real</p>
+        <span id="status">Conectando...</span>
+    </header>
+
+    <main>
+
+        <section class="indicadores">
+
+            <div class="card">
+                <h3>Temperatura</h3>
+                <p id="temperatura">-- °C</p>
+            </div>
+
+            <div class="card">
+                <h3>Umidade</h3>
+                <p id="umidade">-- %</p>
+            </div>
+
+            <div class="card">
+                <h3>Velocidade do vento</h3>
+                <p id="vento">-- km/h</p>
+            </div>
+
+            <div class="card">
+                <h3>Direção do vento</h3>
+                <p id="direcao">--</p>
+            </div>
+
+            <!-- CARTÃO DE CHUVA COM BOTÃO DE RESET -->
+            <div class="card">
+                <h3>Chuva acumulada</h3>
+
+                <p id="chuva">-- mm</p>
+
+                <small>Desde o último zeramento</small>
+
+                <button
+                    id="btnZerarChuva"
+                    type="button"
+                    class="btn-zerar">
+                    Zerar chuva
+                </button>
+            </div>
+
+        </section>
+
+        <section class="graficos">
+
+            <div class="grafico">
+                <h2>Temperatura</h2>
+                <canvas id="graficoTemperatura"></canvas>
+            </div>
+
+            <div class="grafico">
+                <h2>Velocidade do vento</h2>
+                <canvas id="graficoVento"></canvas>
+            </div>
+
+            <div class="grafico">
+                <h2>Chuva acumulada</h2>
+                <canvas id="graficoChuva"></canvas>
+            </div>
+
+        </section>
+
+        <p>
+            Última atualização:
+            <span id="dataHora">Aguardando dados...</span>
+        </p>
+
+    </main>
+
+    <footer>
+        Projeto Integrador — Automação Industrial
+    </footer>
+
+    <!-- Script principal -->
+    <script type="module" src="script.js"></script>
+
+</body>
+</html>
